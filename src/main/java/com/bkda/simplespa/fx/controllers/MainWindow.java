@@ -13,9 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
-import javafx.scene.layout.VBox;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 
 public class MainWindow implements Initializable {
 	
@@ -50,12 +48,29 @@ public class MainWindow implements Initializable {
 					e.printStackTrace();
 				}
             }
-        });    
+        });
+        
+        MenuItem staffItem = new MenuItem("Quản lý nhân viên");
+        menuView.getItems().add(staffItem);
+        staffItem.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+                try {
+                	BorderPane staffPane = (BorderPane) FXUtils.loadComponentFromFXML("/fxml/staffs.fxml");
+                	mainRoot.setCenter(staffPane);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            }
+        });
         
         // --- Menu Help
         Menu menuHelp = new Menu("Help");
-        MenuItem helpMenuItem = new MenuItem("Tro Giup");
+        MenuItem helpMenuItem = new MenuItem("Trợ giúp");
         menuHelp.getItems().add(helpMenuItem);
+        
+        MenuItem aboutItem = new MenuItem("Về SenSpa 1.0");
+        menuHelp.getItems().add(aboutItem);
         
         mainMenuBar.getMenus().addAll(menuFile, menuEdit, menuView, menuHelp);
 	}

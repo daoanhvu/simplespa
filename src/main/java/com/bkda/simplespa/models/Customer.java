@@ -2,6 +2,15 @@ package com.bkda.simplespa.models;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "customers")
 public class Customer implements Serializable {
 	
 	/**
@@ -9,10 +18,15 @@ public class Customer implements Serializable {
 	 */
 	private static final long serialVersionUID = 2555901618408505483L;
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="cusid")
 	private long id;
+	
 	private String name;
 	private String phone;
 	private int numOfVisit;
+	
 	public long getId() {
 		return id;
 	}

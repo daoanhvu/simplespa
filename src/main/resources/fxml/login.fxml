@@ -40,19 +40,19 @@
             	
             	      <Text fx:id="actionTarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                </children>
-         <columnConstraints>
-            <ColumnConstraints />
-            <ColumnConstraints />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-         </rowConstraints>
+			         <columnConstraints>
+			            <ColumnConstraints />
+			            <ColumnConstraints />
+			         </columnConstraints>
+			         <rowConstraints>
+			            <RowConstraints />
+			            <RowConstraints />
+			            <RowConstraints />
+			            <RowConstraints />
+			            <RowConstraints />
+			            <RowConstraints />
+			            <RowConstraints />
+			         </rowConstraints>
             </GridPane>
    </children>
    <columnConstraints>
