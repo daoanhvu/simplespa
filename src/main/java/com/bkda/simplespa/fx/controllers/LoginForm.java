@@ -7,14 +7,16 @@ import java.util.ResourceBundle;
 import com.bkda.simplespa.fx.FXUtils;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
+import javafx.stage.WindowEvent;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
-public class LoginForm implements Initializable {
+public class LoginForm extends GenericController implements Initializable {
 	
 	@FXML
 	private Text actionTarget;

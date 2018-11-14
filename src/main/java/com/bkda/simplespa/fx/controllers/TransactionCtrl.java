@@ -1,21 +1,34 @@
 package com.bkda.simplespa.fx.controllers;
 
-import java.io.IOException;
-
-import com.bkda.simplespa.fx.FXUtils;
+import com.jfoenix.controls.JFXButton;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.TableView;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+import javafx.scene.control.DatePicker;
 
-public class TransactionCtrl {
+public class TransactionCtrl extends GenericController {
+	
+
+	
 	@FXML
-	protected void onLoginClick(ActionEvent evt) {
-		try {
-			FXUtils.launchSceen(null, "/fxml/main_window.xml", "SenSpa v1.0", 1280, 710);
-			((Node)evt.getTarget()).getScene().getWindow().hide();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	private TableView tbServices;
+	@FXML
+	private TableView tbSummary;
+	@FXML
+	private ComboBox cboRoomNumber;
+	@FXML
+	private TextField txtCustomer;
+	@FXML
+	private DatePicker dpFromTime;
+	@FXML
+	private DatePicker dpToTime;
+	
+	@FXML
+	protected void onPrintReceipt(ActionEvent evt) {
+		
 	}
 }

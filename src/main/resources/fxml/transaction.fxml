@@ -1,87 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import java.net.*?>
+<?import fxmltableview.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 
-<GridPane id="login-pane" alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" 
-  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bkda.simplespa.fx.controllers.TransactionCtrl">
-      <stylesheets>
-        <URL value="@style.css" />
-      </stylesheets>
-   <children>
-            <GridPane id="trans-form" hgap="10.0" prefHeight="281.0" prefWidth="644.0" vgap="10.0" 
-                                GridPane.columnIndex="3" GridPane.rowIndex="1">
+<BorderPane styleClass="function-form" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bkda.simplespa.fx.controllers.TransactionCtrl">
+      <BorderPane.margin>
+		       <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+		  </BorderPane.margin>
+      <top>
+            <AnchorPane id="trans-form" prefHeight="281.0" prefWidth="700.0">
                <padding>
                   <Insets bottom="10" left="25" right="25" top="25" />
                 </padding>
                <children>
-                    <Label styleClass="login-label" text="Khach hang:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                    <TextField fx:id="txtLoginName" prefHeight="34.0" prefWidth="198.0" styleClass="login-text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               
-                    <Label styleClass="login-label" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-               
-                    <PasswordField fx:id="txtPassword" prefHeight="34.0" prefWidth="198.0" styleClass="login-text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                    <Label text="Nhan vien phuc vu:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                    <TextField prefHeight="25.0" prefWidth="281.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                      
-                    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                       <children>
-                            <Button id="btn-login" onAction="#onLoginClick" prefHeight="37.0" prefWidth="157.0" text="Sign In" />
-                       </children>
-                    </HBox>
-              
-                    <Text fx:id="actionTarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                    <Label layoutX="73.0" layoutY="14.0" styleClass="trans-form-label" text="Khach hang:" />
+                    <TextField fx:id="txtCustomer" layoutX="197.0" layoutY="215.0" prefHeight="34.0" prefWidth="198.0" />
+                    <Label layoutX="94.0" layoutY="93.0" styleClass="trans-form-label" text="Mã phòng" />
+                    <ComboBox fx:id="cboRoomNumber" layoutX="196.0" layoutY="86.0" prefHeight="34.0" prefWidth="198.0" />
+                    <Label layoutX="96.0" layoutY="138.0" styleClass="trans-form-label" text="Thời gian" />
+                    <HBox spacing="5.0" />
+                    <Label layoutX="87.0" layoutY="191.0" styleClass="trans-form-label" text="NV Phục vụ" />
+                    <TextField layoutX="196.0" layoutY="7.0" prefHeight="34.0" prefWidth="281.0" />
+                    <Label layoutX="117.0" layoutY="232.0" styleClass="trans-form-label" text="Tiền TIP" />
+                    <HBox spacing="10.0" />
+                    <HBox alignment="bottom_right" spacing="50" />
+                      <Button id="btn-login" layoutX="1135.0" layoutY="232.0" onAction="#onPrintReceipt" prefHeight="37.0" prefWidth="157.0" text="Thanh toán" />
+                   <DatePicker fx:id="dpToTime" layoutX="196.0" layoutY="131.0" prefHeight="34.0" />
+                  <TextField layoutX="196.0" layoutY="177.0" prefHeight="34.0" prefWidth="200.0" />
+                   <DatePicker fx:id="dpFromTime" layoutX="485.0" layoutY="131.0" prefHeight="34.0" />
+                   <Label id="mid-date-lb" layoutX="414.0" layoutY="128.0" styleClass="trans-form-label" text="đến">
+			                     <padding>
+			                        <Insets left="20.0" right="10.0" />
+			                     </padding>
+			                  </Label>
+                  <Label layoutX="402.0" layoutY="225.0" text="(VND)" />
                </children>
-               <columnConstraints>
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-                  <RowConstraints />
-                  <RowConstraints />
-                  <RowConstraints />
-                  <RowConstraints />
-                  <RowConstraints />
-                  <RowConstraints />
-               </rowConstraints>
-            </GridPane>
-   </children>
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
-   <TableView fx:id="tbServices" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="4" GridPane.rowSpan="2" >
-          <columns>
-               <TableColumn minWidth="10.0" prefWidth="100.0" text="STT">
-               </TableColumn>
-               <TableColumn fx:id="columnName" minWidth="400.0" prefWidth="550.0" text="Dịch vụ">
-                  <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
-               </TableColumn>
-               <TableColumn minWidth="130.0" prefWidth="200.0" text="Số lượng">
-                  <cellValueFactory><PropertyValueFactory property="refPice" /></cellValueFactory>
-               </TableColumn>
-               <TableColumn minWidth="170.0" prefWidth="230.0" text="Đơn giá">
-                  <cellValueFactory><PropertyValueFactory property="unit" /></cellValueFactory>
-               </TableColumn>
-               <TableColumn minWidth="170.0" prefWidth="230.0" text="Thành tiền">
-                  <cellValueFactory><PropertyValueFactory property="numberOfUses" /></cellValueFactory>
-               </TableColumn>
-          </columns>    
-        </TableView>
-        <Label text="Tổng cộng:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-        <Label text="874000" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-</GridPane>
+            </AnchorPane>
+   </top>
+      <center>
+        <BorderPane stylesheets="@style.css">
+		      <top>
+		      </top>
+		      <center>
+			       <TableView fx:id="tbServices" styleClass="data-table">
+                   <columns>
+                        <TableColumn minWidth="10.0" prefWidth="100.0" text="STT" />
+                        <TableColumn minWidth="400.0" prefWidth="550.0" text="Dịch vụ">
+                           <cellValueFactory>
+                           <PropertyValueFactory property="name" />
+                        </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn minWidth="130.0" prefWidth="200.0" text="Số lượng">
+                           <cellValueFactory>
+                           <PropertyValueFactory property="refPice" />
+                        </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn minWidth="170.0" prefWidth="230.0" text="Đơn giá">
+                           <cellValueFactory>
+                           <PropertyValueFactory property="unit" />
+                        </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn minWidth="170.0" prefWidth="230.0" text="Thành tiền">
+                           <cellValueFactory>
+                           <PropertyValueFactory property="numberOfUses" />
+                        </cellValueFactory>
+                        </TableColumn>
+                     </columns>    
+                   </TableView>
+		      </center>
+          <bottom>
+			         <TableView fx:id="tbSummary" minHeight="50.0" prefHeight="60.0" prefWidth="1312.0">
+                   <columns>
+                        <TableColumn minWidth="10.0" prefWidth="100.0" text="Title" />
+                        <TableColumn minWidth="170.0" prefWidth="230.0" text="Thành tiền">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="total" />
+                           </cellValueFactory>
+                        </TableColumn>
+                   </columns>    
+                 </TableView>
+			    </bottom>
+        </BorderPane>
+      </center>
+</BorderPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600" prefWidth="800" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="424.0" layoutY="357.0" mnemonicParsing="false" text="Lưu" />
+      <Label alignment="CENTER_RIGHT" layoutX="21.0" layoutY="52.0" prefHeight="15.0" prefWidth="89.0" text="Họ tên" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="574.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: blue;" />
+      <TextField layoutX="117.0" layoutY="47.0" />
+      <TextField layoutX="297.0" layoutY="47.0" prefHeight="25.0" prefWidth="232.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="21.0" layoutY="94.0" prefHeight="15.0" prefWidth="89.0" text="Ngày sinh" />
+      <DatePicker layoutX="117.0" layoutY="89.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="21.0" layoutY="135.0" prefHeight="15.0" prefWidth="89.0" text="Giới tính" />
+      <RadioButton layoutX="117.0" layoutY="134.0" mnemonicParsing="false" text="Nam" />
+      <RadioButton layoutX="182.0" layoutY="134.0" mnemonicParsing="false" text="Nữ" />
+   </children>
+</AnchorPane>

@@ -20,7 +20,6 @@ public class Invoice implements Serializable {
 	private static final long serialVersionUID = 1179267486011996815L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="invnumber")
 	private String number;
 	

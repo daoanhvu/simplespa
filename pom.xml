@@ -62,6 +62,13 @@
           <version>1.4.197</version><!--$NO-MVN-MAN-VER$-->
           <scope>runtime</scope>
       </dependency>
+      
+      <!-- https://mvnrepository.com/artifact/com.jfoenix/jfoenix -->
+			<dependency>
+			    <groupId>com.jfoenix</groupId>
+			    <artifactId>jfoenix</artifactId>
+			    <version>8.0.7</version>
+			</dependency>
   </dependencies>
   
   <build>

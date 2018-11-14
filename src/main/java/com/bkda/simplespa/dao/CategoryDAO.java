@@ -9,7 +9,11 @@ import java.util.List;
 
 public class CategoryDAO {
 	
-	EntityManager theManager = FXApplication.getSessionFactory().createEntityManager();
+	private EntityManager theManager;
+	
+	public CategoryDAO() {
+		theManager = FXApplication.getSessionFactory().createEntityManager();
+	}
 	
 	public Category addCategory(Category cat) {
 		theManager.getTransaction().begin();
@@ -19,7 +23,12 @@ public class CategoryDAO {
 	}
 	
 	public List<Category> getAllCategories() {
-		TypedQuery query = theManager.createQuery("from Category", Category.class);
+		TypedQuery<Category> query = theManager.createQuery("from Category", Category.class);
 		return query.getResultList();
+	}
+	
+	@Override
+	public void finalize() {
+		theManager.close();
 	}
 }

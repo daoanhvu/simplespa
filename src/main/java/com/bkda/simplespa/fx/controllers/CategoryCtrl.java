@@ -18,7 +18,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 
-public class CategoryCtrl implements Initializable {
+public class CategoryCtrl extends GenericController implements Initializable {
 	
 	@FXML
 	private TextField txtServiceName;
