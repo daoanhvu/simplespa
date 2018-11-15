@@ -41,10 +41,9 @@ public class MainWindow extends GenericController implements Initializable {
 	
 	private void initMenuBar() {
 		mainMenuBar = new MenuBar();
-		mainMenuBar.setStyle("-fx-background-color: #90caf9");
+//		mainMenuBar.setStyle("-fx-background-color: #90caf9");
         // --- Menu Edit
         Menu menuEdit = new Menu("Chức năng");
- 
         // --- Menu View
         Menu menuView = new Menu("Danh mục");
         MenuItem categoryItem = new MenuItem("Danh mục dịch vụ");
@@ -100,7 +99,6 @@ public class MainWindow extends GenericController implements Initializable {
 			transactionPane = (BorderPane) FXUtils.loadComponentFromFXML("/fxml/transaction.fxml");
 			mainRoot.setCenter(transactionPane);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -24,6 +24,7 @@ public class Customer implements Serializable {
 	private long id;
 	
 	private String name;
+	private byte gender;
 	private String phone;
 	private int numOfVisit;
 	
@@ -38,6 +39,13 @@ public class Customer implements Serializable {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public byte getGender() {
+		return gender;
+	}
+	public void setGender(byte gender) {
+		this.gender = gender;
 	}
 	public String getPhone() {
 		return phone;

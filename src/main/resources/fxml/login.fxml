@@ -16,7 +16,7 @@
                <Font name="Lucida Sans Regular" size="96.0" />
             </font>
          </Text>
-      <Text id="text-slogan" fill="#f5efe6" layoutX="834.0" layoutY="227.0" text="Tận hưởng cuộc sống trọn vẹn" textAlignment="CENTER" wrappingWidth="322.4375">
+      <Text id="text-slogan" fill="#f5efe6" layoutX="834.0" layoutY="227.0" text="Tận hưởng cuộc sống trọn vẹn." textAlignment="CENTER" wrappingWidth="322.4375">
          <font>
             <Font name="FreeSerif Bold" size="19.0" />
          </font>
