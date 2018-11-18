@@ -1,0 +1,72 @@
+@font-face {
+	src: url('IsadoraCyrPro.ttf');	
+}
+
+#login-pane {
+	-fx-background-image: url('/loginbg.jpg');
+}
+
+#text-client-name {
+	-fx-font-family: 'PG Isadora Cyr Pro';
+	-fx-font-weight: bold;
+	-fx-font-size: 64px;
+	-fx-text-fill: #ff3d00;
+	-fx-effect: dropshadow(gaussian, royalblue, 3, 0, 3, 3);
+}
+
+#text-slogan {
+  
+}
+
+.login-label {
+	-fx-font-size: 18px;
+}
+
+.login-text {
+	-fx-font-size: 14px;
+}
+
+#btn-login {
+    -fx-background-color : #29B6F6;
+    -fx-text-fill        : #FFFFFF;
+    -fx-font-weight      : 900;
+}
+
+#btn-login:hover {
+  -fx-background-color : #01579B;
+}
+
+#login-form {
+  -fx-background-color : #FFFFFF;
+  -fx-background-radius: 15;
+  -fx-border-radius: 15;
+  -fx-opacity: 0.7;
+  -fx-effect: dropshadow(gaussian, black, 6, 0.3, 3.0, 3.0);
+}
+
+.table-row-cell:last-line {
+  -fx-font-weight: bold;
+  -fx-background: ivory;
+}
+
+#tbSummary > .column-header-background { 
+  visibility: hidden;
+  -fx-padding: -1em; 
+}
+
+
+.trans-form-label {
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #0277BD;
+}
+
+#mid-date-lb {
+  -fx-padding: 10 10 10 10;
+}
+.function-form {
+  -fx-background-color: #e1f5fe;
+}
+.data-table {
+  -fx-background-color: #e1f5fe;
+}

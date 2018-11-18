@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.*?>
+<?import fxmltableview.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+                fx:controller="com.bkda.simplespa.fx.controllers.StaffsCtrl">
+  <BorderPane.margin>
+       <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+  </BorderPane.margin>
+  <top>
+      <HBox spacing="10">
+         <children>
+               <TextField fx:id="txtServiceName" prefHeight="28.0" prefWidth="430.0" />
+               <Button onAction="#onSearchClick" text="Tìm" />
+               <Button onAction="#onAddNew" text="Thêm dịch vụ mới" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+  </top>
+  <center>
+      <TableView fx:id="tbServices" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <columns>
+               <TableColumn minWidth="10.0" prefWidth="100.0" text="STT">
+               </TableColumn>
+               <TableColumn fx:id="columnName" minWidth="400.0" prefWidth="550.0" text="Tên dịch vụ">
+                  <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
+               </TableColumn>
+               <TableColumn minWidth="130.0" prefWidth="200.0" text="Giá tham khảo">
+                  <cellValueFactory><PropertyValueFactory property="refPice" /></cellValueFactory>
+               </TableColumn>
+               <TableColumn minWidth="170.0" prefWidth="230.0" text="Đơn vị">
+                  <cellValueFactory><PropertyValueFactory property="unit" /></cellValueFactory>
+               </TableColumn>
+               <TableColumn minWidth="170.0" prefWidth="230.0" text="Số lần sử dụng">
+                  <cellValueFactory><PropertyValueFactory property="numberOfUses" /></cellValueFactory>
+               </TableColumn>
+               <TableColumn minWidth="170.0" prefWidth="230.0" text="Xóa">
+                  <cellValueFactory><PropertyValueFactory property="unit" /></cellValueFactory>
+               </TableColumn>
+          </columns>    
+        </TableView>
+  </center>
+</BorderPane>

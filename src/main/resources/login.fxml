@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="login-pane" prefHeight="710" prefWidth="1280" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bkda.simplespa.fx.controllers.LoginForm">
+   <children>
+         <Text id="text-client-name" fill="#ff9300" layoutX="834.0" layoutY="183.0" text="Sen Spa" textAlignment="CENTER" wrappingWidth="322.4375" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+         </Text>
+      <Text id="text-slogan" fill="#f5efe6" layoutX="834.0" layoutY="227.0" text="Tận hưởng cuộc sống trọn vẹn." textAlignment="CENTER" wrappingWidth="322.4375">
+         <font>
+            <Font name="FreeSerif Bold" size="19.0" />
+         </font>
+      </Text>
+         <GridPane id="login-form" fx:id="loginForm" hgap="10.0" layoutX="813.0" layoutY="291.0" vgap="10.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <padding>
+      	          <Insets bottom="10" left="25" right="25" top="25" />
+      	        </padding>
+               <children>
+            	      <Label styleClass="login-label" text="Người sử dụng:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            	      <TextField fx:id="txtLoginName" prefHeight="34.0" prefWidth="198.0" styleClass="login-text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            	 
+            	      <Label styleClass="login-label" text="Mật khẩu:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            	 
+            	      <PasswordField fx:id="txtPassword" prefHeight="34.0" prefWidth="198.0" styleClass="login-text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            	        
+            	      <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
+      				         <children>
+              			        <Button id="btn-login" onAction="#onLoginClick" prefHeight="37.0" prefWidth="157.0" text="Đăng nhập" />
+      				         </children>
+            			  </HBox>
+            	
+            	      <Text fx:id="actionTarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+			         <columnConstraints>
+			            <ColumnConstraints />
+			            <ColumnConstraints />
+			         </columnConstraints>
+			         <rowConstraints>
+			            <RowConstraints maxHeight="10.0" minHeight="0.0" prefHeight="0.0" />
+			            <RowConstraints maxHeight="34.0" minHeight="24.0" prefHeight="34.0" />
+			            <RowConstraints />
+			            <RowConstraints />
+			            <RowConstraints />
+			            <RowConstraints />
+			            <RowConstraints />
+			         </rowConstraints>
+         </GridPane>
+   </children>
+</AnchorPane>

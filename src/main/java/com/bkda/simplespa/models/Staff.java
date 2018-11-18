@@ -3,6 +3,15 @@ package com.bkda.simplespa.models;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "staffs")
 public class Staff implements Serializable {
 	
 	/**
@@ -10,16 +19,23 @@ public class Staff implements Serializable {
 	 */
 	private static final long serialVersionUID = 8562826950252235062L;
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="catid")
 	private long id;
+	
 	private String firstName;
 	private String lastName;
 	private Date birthday;
 	private String phone;
+	private String email;
 	private String address;
 	private String avatar;
 	private Date startDate;
 	private Date lastDate;
+	
 	private byte status;
+	
 	public long getId() {
 		return id;
 	}
@@ -79,5 +95,11 @@ public class Staff implements Serializable {
 	}
 	public void setStatus(byte status) {
 		this.status = status;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

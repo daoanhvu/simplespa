@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:controller="com.bkda.simplespa.fx.controllers.MainWindow"
+  xmlns:fx="http://javafx.com/fxml" fx:id="mainRoot">
+</BorderPane>

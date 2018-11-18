@@ -1,9 +1,33 @@
 package com.bkda.simplespa.models;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "invoiceitems")
 public class InvoiceItem {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="invitemid")
 	private long id;
+	
+	@ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
+	@JoinColumn(name = "invnumber")
 	private Invoice invoice;
+	
+	@ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+	@JoinColumn(name = "catid")
 	private Category category;
+	
 	private long price;
 	private String note;
 	
