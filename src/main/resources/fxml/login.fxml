@@ -11,14 +11,11 @@
 
 <AnchorPane id="login-pane" prefHeight="710" prefWidth="1280" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bkda.simplespa.fx.controllers.LoginForm">
    <children>
-         <Text id="text-client-name" fill="#ff9300" layoutX="834.0" layoutY="183.0" text="Sen Spa" textAlignment="CENTER" wrappingWidth="322.4375" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
-            <font>
-               <Font name="Lucida Sans Regular" size="96.0" />
-            </font>
+         <Text id="text-client-name" fx:id="txtClientName" fill="#ff9300" layoutX="834.0" layoutY="183.0" text="Sen Spa" textAlignment="CENTER" wrappingWidth="322.4375" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
          </Text>
       <Text id="text-slogan" fill="#f5efe6" layoutX="834.0" layoutY="227.0" text="Tận hưởng cuộc sống trọn vẹn." textAlignment="CENTER" wrappingWidth="322.4375">
          <font>
-            <Font name="FreeSerif Bold" size="19.0" />
+            <Font name="PGIsadoraCyrPro-Regular" size="19.0" />
          </font>
       </Text>
          <GridPane id="login-form" fx:id="loginForm" hgap="10.0" layoutX="813.0" layoutY="291.0" vgap="10.0" GridPane.columnIndex="3" GridPane.rowIndex="1">

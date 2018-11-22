@@ -19,8 +19,7 @@
                   <Insets bottom="10" left="25" right="25" top="25" />
                 </padding>
                <children>
-                    <AnchorPane layoutX="77.0" layoutY="45.0" prefHeight="135.0" prefWidth="1000.0" 
-                      style="-fx-background-color: #e1f5fe; -fx-border-color: #e1f5fe; -fx-effect: dropshadow(three-pass-box, black, 3, 0.1, 2.0, 2.0);" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="77.0" AnchorPane.topAnchor="15.0">
+                    <AnchorPane layoutX="77.0" layoutY="45.0" prefHeight="135.0" prefWidth="1000.0" style="-fx-border-insets: 4 0 0 0; -fx-background-color: #e1f5fe; -fx-border-color: black;" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="77.0" AnchorPane.topAnchor="15.0">
                        <children>
                         <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="20.0" prefWidth="130.0" styleClass="trans-form-label" text="Khách hàng:" textAlignment="RIGHT" />
                         <TextField fx:id="txtCustomerName" layoutX="150.0" layoutY="13.0" prefHeight="34.0" prefWidth="404.0" />
@@ -37,7 +36,7 @@
                     <Label alignment="CENTER_RIGHT" layoutX="111.0" layoutY="279.0" prefWidth="120.0" styleClass="trans-form-label" text="NV Phục vụ:" />
                     <TextField layoutX="252.0" layoutY="272.0" prefHeight="34.0" prefWidth="482.0" />
                     <Label alignment="CENTER_RIGHT" layoutX="111.0" layoutY="324.0" prefWidth="130.0" styleClass="trans-form-label" text="Tiền TIP:" />
-                    <TextField fx:id="txtTIP" layoutX="252.0" layoutY="317.0" prefHeight="34.0" prefWidth="200.0" />
+                    <TextField layoutX="252.0" fx:id="txtTIP" layoutY="317.0" prefHeight="34.0" prefWidth="200.0" />
                     <DatePicker fx:id="dpFromTime" layoutX="252.0" layoutY="224.0" prefHeight="34.0" />
                     <DatePicker fx:id="dpToTime" layoutX="500.0" layoutY="224.0" prefHeight="34.0" />
                     <Label id="mid-date-lb" layoutX="450.0" layoutY="224.0" styleClass="trans-form-label" text="đến">

@@ -1,12 +1,28 @@
+
+@font-face {
+    src: url('/fonts/Roboto-Medium.ttf');
+}
+@font-face {
+    src: url('/fonts/Roboto-Bold.ttf');
+}
+@font-face {
+    src: url('/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    src: url('/fonts/IsadoraCyrPro.ttf');
+}
+
 #login-pane {
 	-fx-background-image: url('/loginbg.jpg');
+	-fx-background-repeat: no-repeat;
 }
 
 #text-client-name {
 	-fx-font-weight: bold;
+	-fx-font-family: Arial;
 	-fx-font-size: 64px;
 	-fx-text-fill: #ff3d00;
-	-fx-effect: dropshadow(gaussian, royalblue, 3, 0, 3, 3);
+	-fx-effect:dropshadow(gaussian, royalblue, 3, 0, 3, 3);
 }
 
 #text-slogan {

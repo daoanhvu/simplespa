@@ -7,11 +7,10 @@ import java.util.ResourceBundle;
 import com.bkda.simplespa.fx.FXUtils;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.WindowEvent;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -31,6 +30,9 @@ public class LoginForm extends GenericController implements Initializable {
 	private TextField txtPassword;
 	
 	@FXML
+	private Text txtClientName;
+	
+	@FXML
 	protected void onLoginClick(ActionEvent evt) {
 		try {
 			FXUtils.launchSceen(null, "/fxml/main_window.xml", "SenSpa v1.0", 1280, 710);
@@ -42,6 +44,6 @@ public class LoginForm extends GenericController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
+		txtClientName.setFont(Font.loadFont("file:resources/fonts/IsadoraCyrPro.ttf", 120.0));
 	}
 }

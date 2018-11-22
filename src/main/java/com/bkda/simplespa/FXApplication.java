@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.text.Font;
 
 import javax.persistence.Persistence;
 import javax.persistence.EntityManagerFactory;
@@ -16,6 +17,7 @@ public class FXApplication extends Application {
 	private static EntityManagerFactory factory;
 	
 	public static void main(String[] args) {
+//		Font.loadFont(FXApplication.class.getResourceAsStream("/IsadoraCyrPro.ttf"), 16);
 		factory = Persistence.createEntityManagerFactory("simplespa");
 		launch(args);
 	}
