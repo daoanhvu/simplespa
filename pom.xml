@@ -84,13 +84,6 @@
           <directory>src/main/resources</directory>
           <filtering>true</filtering>
       </resource>
-      <!-- <resource>
-            <directory>src/main/resources/fonts</directory>
-            <targetPath>${project.build.outputDirectory}</targetPath>
-            <includes>
-                <include>**/*.ttf</include>
-            </includes>
-       </resource> -->
     </resources>
     <plugins>
       <plugin>

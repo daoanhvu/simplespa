@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300" prefWidth="776.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER_RIGHT" layoutX="36.0" layoutY="52.0" prefHeight="15.0" prefWidth="89.0" text="Họ tên" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="574.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: blue;" />
+      <TextField layoutX="137.0" layoutY="47.0" prefHeight="27.0" prefWidth="156.0" />
+      <TextField layoutX="304.0" layoutY="47.0" prefHeight="25.0" prefWidth="232.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="36.0" layoutY="94.0" prefHeight="15.0" prefWidth="89.0" text="Ngày sinh" />
+      <DatePicker layoutX="137.0" layoutY="89.0" prefHeight="27.0" prefWidth="210.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="329.0" layoutY="95.0" prefHeight="15.0" prefWidth="89.0" text="Giới tính" />
+      <RadioButton layoutX="428.0" layoutY="94.0" mnemonicParsing="false" text="Nam" />
+      <RadioButton layoutX="493.0" layoutY="94.0" mnemonicParsing="false" text="Nữ" />
+      <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="209.0" prefHeight="17.0" prefWidth="113.0" text="Ngày bắt đầu làm:" />
+      <DatePicker layoutX="137.0" layoutY="204.0" prefHeight="27.0" prefWidth="210.0" />
+      <TextField layoutX="137.0" layoutY="129.0" prefHeight="27.0" prefWidth="622.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="134.0" prefHeight="15.0" prefWidth="89.0" text="Địa chỉ" />
+      <Button layoutX="630.0" layoutY="239.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="125.0" text="Lưu" />
+      <Button layoutX="490.0" layoutY="239.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="125.0" text="Hủy" />
+      <Label alignment="CENTER_RIGHT" layoutX="36.0" layoutY="171.0" prefHeight="15.0" prefWidth="89.0" text="Số ĐT:" />
+      <TextField layoutX="136.0" layoutY="166.0" prefHeight="27.0" prefWidth="323.0" />
+   </children>
+</AnchorPane>

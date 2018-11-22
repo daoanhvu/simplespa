@@ -18,6 +18,7 @@
 }
 
 #text-client-name {
+	-fx-font-family: 'PG Isadora Cyr Pro';
 	-fx-font-weight: bold;
 	-fx-font-family: Arial;
 	-fx-font-size: 64px;

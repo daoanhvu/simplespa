@@ -28,6 +28,7 @@ public class Staff implements Serializable {
 	private String lastName;
 	private Date birthday;
 	private String phone;
+	private String email;
 	private String address;
 	private String avatar;
 	private Date startDate;
@@ -94,5 +95,11 @@ public class Staff implements Serializable {
 	}
 	public void setStatus(byte status) {
 		this.status = status;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

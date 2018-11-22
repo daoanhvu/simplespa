@@ -35,7 +35,7 @@ public class LoginForm extends GenericController implements Initializable {
 	@FXML
 	protected void onLoginClick(ActionEvent evt) {
 		try {
-			FXUtils.launchSceen(null, "/fxml/main_window.xml", "SenSpa v1.0", 1280, 710);
+			FXUtils.launchSceen(null, "/main_window.fxml", "SenSpa v1.0", 1280, 710);
 			((Node)evt.getTarget()).getScene().getWindow().hide();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -44,6 +44,5 @@ public class LoginForm extends GenericController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		txtClientName.setFont(Font.loadFont("file:resources/fonts/IsadoraCyrPro.ttf", 120.0));
 	}
 }

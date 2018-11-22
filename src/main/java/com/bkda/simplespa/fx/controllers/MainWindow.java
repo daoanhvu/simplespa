@@ -12,12 +12,10 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.MenuBar;
-import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
 
@@ -51,10 +49,9 @@ public class MainWindow extends GenericController implements Initializable {
         categoryItem.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent t) {
                 try {
-                	BorderPane categoryPane = (BorderPane) FXUtils.loadComponentFromFXML("/fxml/categories.fxml");
+                	BorderPane categoryPane = (BorderPane) FXUtils.loadComponentFromFXML("/categories.fxml");
                 	mainRoot.setCenter(categoryPane);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
             }
@@ -65,10 +62,9 @@ public class MainWindow extends GenericController implements Initializable {
         staffItem.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent t) {
                 try {
-                	BorderPane staffPane = (BorderPane) FXUtils.loadComponentFromFXML("/fxml/staffs.fxml");
+                	BorderPane staffPane = (BorderPane) FXUtils.loadComponentFromFXML("/staffs.fxml");
                 	mainRoot.setCenter(staffPane);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
             }
@@ -96,7 +92,7 @@ public class MainWindow extends GenericController implements Initializable {
 		mainRoot.setTop(this.mainMenuBar);
 		BorderPane transactionPane;
 		try {
-			transactionPane = (BorderPane) FXUtils.loadComponentFromFXML("/fxml/transaction.fxml");
+			transactionPane = (BorderPane) FXUtils.loadComponentFromFXML("/transaction.fxml");
 			mainRoot.setCenter(transactionPane);
 		} catch (IOException e) {
 			e.printStackTrace();
