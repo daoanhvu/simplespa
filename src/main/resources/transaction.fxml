@@ -19,9 +19,7 @@
                   <Insets bottom="10" left="10" right="10" top="10" />
                 </padding>
                <children>
-                    <AnchorPane layoutX="77.0" layoutY="45.0" prefHeight="135.0" prefWidth="1000.0" 
-                    	style="-fx-border-insets: 4 0 0 0; -fx-background-color: #e1f5fe; -fx-border-color: #b1d1f5;" 
-                    	AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">
+                    <AnchorPane layoutX="77.0" layoutY="45.0" prefHeight="135.0" prefWidth="1000.0" style="-fx-border-insets: 4 0 0 0; -fx-background-color: #e1f5fe; -fx-border-color: #b1d1f5;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">
                        <children>
                         <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="20.0" prefWidth="130.0" styleClass="trans-form-label" text="Khách hàng:" textAlignment="RIGHT" />
                         <TextField fx:id="txtCustomerName" layoutX="150.0" layoutY="13.0" prefHeight="34.0" prefWidth="592.0" />
@@ -41,8 +39,8 @@
                     <Label alignment="CENTER_RIGHT" layoutX="566.0" layoutY="168.0" prefHeight="20.0" prefWidth="89.0" styleClass="trans-form-label" text="Thời gian:" />
                     <Label alignment="CENTER_RIGHT" layoutX="42.0" layoutY="209.0" prefWidth="120.0" styleClass="trans-form-label" text="NV Phục vụ:" />
                     <TextField layoutX="173.0" layoutY="202.0" prefHeight="34.0" prefWidth="513.0" />
-                    <Label alignment="CENTER_RIGHT" layoutX="691.0" layoutY="209.0" prefHeight="20.0" prefWidth="72.0" styleClass="trans-form-label" text="Tiền TIP:" />
-                    <TextField fx:id="txtTIP" layoutX="773.0" layoutY="202.0" prefHeight="34.0" prefWidth="295.0" />
+                    <Label alignment="CENTER_RIGHT" layoutX="691.0" layoutY="209.0" prefHeight="20.0" prefWidth="85.0" styleClass="trans-form-label" text="Tiền TIP:" />
+                    <TextField fx:id="txtTIP" layoutX="783.0" layoutY="202.0" prefHeight="34.0" prefWidth="344.0" />
                     <DatePicker fx:id="dpFromTime" layoutX="669.0" layoutY="158.0" prefHeight="34.0" />
                     <DatePicker fx:id="dpToTime" layoutX="929.0" layoutY="158.0" prefHeight="34.0" />
                     <Label id="mid-date-lb" layoutX="872.0" layoutY="158.0" styleClass="trans-form-label" text="đến">
@@ -50,7 +48,7 @@
 			                        <Insets left="20.0" right="10.0" />
 			                     </padding>
 			                  </Label>
-                    <Label layoutX="1084.0" layoutY="212.0" text="(VND)" />
+                    <Label layoutX="1143.0" layoutY="212.0" text="(VND)" />
                </children>
             </AnchorPane>
    </top>
